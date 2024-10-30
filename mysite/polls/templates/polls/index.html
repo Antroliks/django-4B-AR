@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polls Index</title>
+    <title>Polls</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'polls/style.css' %}">
 </head>
 <body>
     <header>
         <h1>Polls</h1>
     </header>
     <main>
-        <h2>Aailable Polls</h2>
+        <h2>Latest Polls</h2>
         {% if latest_question_list %}
             <ul>
             {% for question in latest_question_list %}
@@ -21,5 +23,9 @@
             <p>No polls are available.</p>
         {% endif %}
     </main>
+
+    <footer>
+        <p>&copy; 2024 Polls Application</p>
+    </footer>
 </body>
 </html>
